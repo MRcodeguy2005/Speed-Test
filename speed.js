@@ -42,34 +42,36 @@ var images =[
         "file":"https://www.sefram.com/images/products/photos/hi_res/SP260B.jpg",
         "size": 3633130
     },
-    {
-        "file":"https://images6.alphacoders.com/126/1261894.jpg",
-        "size": 7274972
-    },
-    {
-        "file":"https://svs.gsfc.nasa.gov/vis/a030000/a030800/a030877/frames/5760x3240_16x9_01p/BlackMarble_2016_464m_caribbean_labeled.png",
-        "size": 13834144
-    },
-    {
-        "file":"https://svs.gsfc.nasa.gov/vis/a030000/a030800/a030877/frames/5760x3240_16x9_01p/BlackMarble_2016_928m_russia_east_labeled.png",
-        "size": 23403895
-    }
 ]
 
 var global_time;
 
 //BEFORE SPEED TEST
 function speed(){
+    
     const button = document.getElementById("btn");
+    document.getElementById("result").style.display = "block";
     global_time = new Date().getTime();
     button.disabled = true;
+    button.style.display = 'none';
     func(0);
 }
 
+//SLEEP FN
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
+
 //AFTER SPEEDTEST
 function enable_btn(){
+    sleep(2000);
     const button = document.getElementById("btn");
-    document.getElementById("btn").innerHTML = "check again";
+    document.getElementById("btn").innerHTML = "AGAIN";
+    button.style.display = 'block';
     button.disabled = false;
 }
 
