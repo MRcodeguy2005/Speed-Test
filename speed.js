@@ -88,7 +88,7 @@ function func(i){
 
     //ALL FILES ARE EXHAUSTED
     if(i===images.length){
-        
+        enable_btn();
         return;
     }
 
