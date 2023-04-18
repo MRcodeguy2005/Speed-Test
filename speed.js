@@ -1,6 +1,4 @@
-/*
-  Para poder poner este script en tu server tienes que poner tambien un archivo en tu server y saber de que tamaño es para poner la informacion en imageAddr y downloadSize.
-*/
+
 var images =[
     {
         "file":"https://www.sefram.com/images/products/photos/hi_res/207030301.jpg",
@@ -50,7 +48,10 @@ var global_time;
 function speed(){
     
     const button = document.getElementById("btn");
+    const buttonafter=document.getElementById("btn-after");
+    buttonafter.style.display='none';
     document.getElementById("result").style.display = "block";
+    
     global_time = new Date().getTime();
     button.disabled = true;
     button.style.display = 'none';
@@ -69,8 +70,9 @@ function sleep(milliseconds) {
 //AFTER SPEEDTEST
 function enable_btn(){
     sleep(2000);
-    const button = document.getElementById("btn");
-    document.getElementById("btn").innerHTML = "AGAIN";
+    const button = document.getElementById("btn-after");
+    document.getElementById("btn-after").innerHTML = "TRY AGAIN";
+    document.getElementById("result").style.marginTop='0';
     button.style.display = 'block';
     button.disabled = false;
 }
@@ -85,7 +87,10 @@ function func(i){
     }
 
     //ALL FILES ARE EXHAUSTED
-    if(i===images.length)return;
+    if(i===images.length){
+        
+        return;
+    }
 
     var start,end,timeduration;
     start =new Date().getTime();
@@ -97,9 +102,11 @@ function func(i){
         timeduration = (end - start)/1000;
         let loadedbites = (images[i].size)*8
         let speed = ((loadedbites/timeduration)/1024/1024).toFixed(2);
+        let ress=document.getElementById("result");
+        ress.style.marginTop='150px';
         if(speed<1){
             speed = speed*1024;
-            document.getElementById("result").innerHTML = speed +" "+ "Kbps";
+            ress.innerHTML = speed +" "+ "Kbps";
         }
         else if(speed >=1){
             document.getElementById("result").innerHTML = speed +" "+ "Mbps";
