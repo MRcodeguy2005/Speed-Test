@@ -148,3 +148,20 @@ body{
 .content small{
     font-size: 40%;
 }
+#btn-after{
+    transition: visibility 0s, opacity 0.5s linear;
+    display: none;
+    width: 200px;
+    height: 200px;
+    font-size: 1.4rem;
+}
+
+#result{
+    font-size: 3.5rem;
+    
+    
+}
+#load{
+    transition: visibility 0s, opacity 0.5s linear;
+    display: none;
+}
