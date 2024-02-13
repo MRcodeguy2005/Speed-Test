@@ -1,0 +1,18 @@
+#hello{
+    display: flex;
+    font-size: x-large;
+    justify-content:flex-start;
+    flex-direction: column;
+    padding: 2em 2em 1em 2em;
+    background: hsla(217, 86%, 29%, 0.671);
+    backdrop-filter: blur(1em);
+    border-radius: 10px;
+    margin: 1em 4%;
+}
+#about_hlw{
+    justify-content: left;
+    margin: 0%;
+}
+#hello p{
+    color: rgb(219, 210, 210);
+}

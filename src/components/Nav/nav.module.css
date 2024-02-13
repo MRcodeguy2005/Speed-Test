@@ -1,0 +1,29 @@
+.navbar{
+    display: flex;
+    margin: 0%;
+    padding-right:1rem;
+    padding-left: 1rem;
+    list-style: none;
+}
+
+@media (max-width:30em){
+    .navbar ul{
+        z-index: 7000;
+        position: fixed;
+        inset: 0 0 0 20%;
+        background: steelblue;
+        flex-direction: column;
+        padding: min(20vh,7em) 4em;
+        background:  hsla(222, 100%, 8%, 0.623);
+        backdrop-filter: blur(1em);
+        transform: translateX(100%);
+    }
+    .navbar ul li{
+        display: flex;
+        padding: 0.5em 1em;
+        
+    }
+    .navbar ul li a.about{
+        padding-left: .5em;
+    }
+}

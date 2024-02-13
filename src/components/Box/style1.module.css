@@ -1,0 +1,27 @@
+.Start_button{
+    grid-area: el2;
+    display: flex;
+    font-size: x-large;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 2.7em 1.7em;
+    margin: 0%;
+    border-radius: 49%;
+    border:2px solid #81ecec;
+    color: rgb(208, 204, 204);
+    background-color: #0000009a;
+    
+} 
+
+.Start_button1{
+    display: flex;
+    font-size: xx-large;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 2em 1.7em;
+    margin: 0%;
+    border-radius: 49%;
+    border:2px solid #81ecec;
+    color: rgb(208, 204, 204);
+    background-color: #0000009a;
+}

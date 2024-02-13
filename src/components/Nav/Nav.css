@@ -1,0 +1,87 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: rgb(0, 18, 27);
+    
+}
+@media(min-width:30em) {
+    #Hambur{
+        display: none;
+    }
+}
+
+@media (max-width:30em){
+    .navbar ul{
+        z-index: 7000;
+        position: fixed;
+        inset: 0 0 0 20%;
+        background: steelblue;
+        flex-direction: column;
+        padding: min(20vh,7em) 4em;
+        background:  hsla(222, 100%, 8%, 0.623);
+        backdrop-filter: blur(1em);
+        transform: translateX(100%);
+    }
+    .navbar ul li{
+        display: flex;
+        padding: 0.5em 1em;
+        
+    }
+    .navbar ul li a.about{
+        padding-left: .5em;
+    }
+    #Hambur{
+        display: flex;
+        padding: 1em 2em;
+        background: none;
+        border: none;
+        z-index: 8000;
+    
+    }
+}
+
+.log{
+    display: flex;
+    padding: 0em 0em;
+}
+.navbar a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar ul{
+    display: flex;
+    margin: 0%;
+    padding-right:1rem;
+    padding-left: 1rem;
+    list-style: none;
+}
+.navbar-brand{
+    display: flex;
+    font-size: x-large;
+    font-weight: bold;
+    color: rgb(237, 234, 234);
+    padding: .4em .2em;
+}
+.about{
+    display: flex;
+    font-size: large;
+    color: rgb(237, 234, 234);
+    padding: .7em 1em;
+}
+.logo{
+    display: flex;
+    padding: .7em .3em .7em .7em;
+    margin-left: .5em;
+}
+.gith{
+    display: flex;
+    cursor: pointer;
+    font-size: large;
+    display: flex;
+    height: 1.5em;
+    padding: .7em .5em;
+}
+
+
